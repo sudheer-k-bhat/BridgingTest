@@ -14,6 +14,8 @@
 		1318019B1BFA0CE600971313 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1318019A1BFA0CE600971313 /* Images.xcassets */; };
 		1318019E1BFA0CE600971313 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1318019C1BFA0CE600971313 /* LaunchScreen.xib */; };
 		131801AA1BFA0CE700971313 /* BridgingTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 131801A91BFA0CE700971313 /* BridgingTestTests.m */; };
+		131801B71BFA0D3300971313 /* To.m in Sources */ = {isa = PBXBuildFile; fileRef = 131801B61BFA0D3300971313 /* To.m */; };
+		131801BA1BFA0D8700971313 /* From.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131801B91BFA0D8700971313 /* From.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,10 @@
 		131801A31BFA0CE700971313 /* BridgingTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BridgingTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		131801A81BFA0CE700971313 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		131801A91BFA0CE700971313 /* BridgingTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BridgingTestTests.m; sourceTree = "<group>"; };
+		131801B51BFA0D3300971313 /* To.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = To.h; sourceTree = "<group>"; };
+		131801B61BFA0D3300971313 /* To.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = To.m; sourceTree = "<group>"; };
+		131801B81BFA0D8600971313 /* BridgingTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BridgingTest-Bridging-Header.h"; sourceTree = "<group>"; };
+		131801B91BFA0D8700971313 /* From.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = From.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +95,10 @@
 				1318019A1BFA0CE600971313 /* Images.xcassets */,
 				1318019C1BFA0CE600971313 /* LaunchScreen.xib */,
 				1318018D1BFA0CE600971313 /* Supporting Files */,
+				131801B51BFA0D3300971313 /* To.h */,
+				131801B61BFA0D3300971313 /* To.m */,
+				131801B91BFA0D8700971313 /* From.swift */,
+				131801B81BFA0D8600971313 /* BridgingTest-Bridging-Header.h */,
 			);
 			path = BridgingTest;
 			sourceTree = "<group>";
@@ -221,6 +231,8 @@
 			files = (
 				131801961BFA0CE600971313 /* ViewController.m in Sources */,
 				131801931BFA0CE600971313 /* AppDelegate.m in Sources */,
+				131801B71BFA0D3300971313 /* To.m in Sources */,
+				131801BA1BFA0D8700971313 /* From.swift in Sources */,
 				131801901BFA0CE600971313 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,9 +359,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = BridgingTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BridgingTest/BridgingTest-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -357,9 +372,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = BridgingTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BridgingTest/BridgingTest-Bridging-Header.h";
 			};
 			name = Release;
 		};
